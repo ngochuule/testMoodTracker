@@ -6,7 +6,6 @@ orbs:
 
 jobs:
   build:
-    working_directory: ~/code
     docker: 
       - image: circleci/openjdk:11.0.3-jdk-stretch
       - image: circleci/android:api-28-alpha
