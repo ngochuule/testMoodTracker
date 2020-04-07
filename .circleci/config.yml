@@ -58,6 +58,11 @@ jobs:
             - ~/.gradle/caches
           key: v1-gradle-cache-{{ checksum "build.gradle" }}
 
+      - run:
+          name: chmod permissions
+          command: chmod +x ./gradlew
+      - run:
+          command: ./gradlew build
 workflows:
   build:
     jobs:
